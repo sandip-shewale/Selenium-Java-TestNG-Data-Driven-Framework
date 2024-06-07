@@ -2,7 +2,10 @@
 
 1. Project Setup:
    - Create a Maven project in your preferred IDE.
-   - Add dependencies for Selenium WebDriver and TestNG in the `pom.xml` file.
+   - Add Maven Dependencies for Selenium WebDriver and TestNG in the `pom.xml` file.
+      - selenium-java [Integrate Selenium Java dependency]
+      - testNG [TestNG streamlines testing with annotations, grouping, parameterization, and reporting]
+      - Apache POI [To read / write into Excel file]
 
 2. Framework Structure:
    - Organize project into packages (e.g., Pages, Tests, Utilities).
