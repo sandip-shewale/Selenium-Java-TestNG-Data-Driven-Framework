@@ -6,6 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import resources.ExtentManager;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,6 +18,7 @@ public class BaseTest {
     @BeforeMethod
     public WebDriver initializeDriver() {
 
+        ExtentManager.getInstance();
         String browser = configReader.getConfigProperties("browser");
         String url = configReader.getConfigProperties("url");
 
@@ -42,6 +44,7 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
         }
+        ExtentManager.endTest();
     }
 
 }
