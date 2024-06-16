@@ -1,4 +1,4 @@
-**Selenium | Java | TestNG | Maven | Data Driven Framework**
+** Selenium | Java | TestNG | Maven | Data Driven Framework | Extent **
 
 1. Project Setup:
    - Create a Maven project in your preferred IDE.
