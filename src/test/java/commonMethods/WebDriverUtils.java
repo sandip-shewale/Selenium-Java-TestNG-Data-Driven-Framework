@@ -8,17 +8,23 @@ import pageObjects.BasePage;
 
 import java.time.Duration;
 
-public class WaitingMethods extends BasePage {
+public class WebDriverUtils extends BasePage {
 
     private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-    public WaitingMethods(WebDriver driver) {
+    public WebDriverUtils(WebDriver driver) {
         super(driver);
     }
 
     public void waitUntilClickableAndClick(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
+    }
+
+    public void enterText(WebElement element, String value) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        element.clear();
+        element.sendKeys(value);
     }
 
 }

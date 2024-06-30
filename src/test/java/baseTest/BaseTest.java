@@ -1,5 +1,7 @@
 package baseTest;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -12,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
+    protected static final Logger logger = LogManager.getLogger(BaseTest.class);
     protected ConfigReader configReader = new ConfigReader();
     protected WebDriver driver;
 
@@ -25,12 +28,15 @@ public class BaseTest {
         switch (browser.toLowerCase()) {
             case "chrome":
                 driver = new ChromeDriver();
+                logger.info("Launching chrome browser");
                 break;
             case "firefox":
                 driver = new FirefoxDriver();
+                logger.info("Launching firefox browser");
                 break;
             case "edge":
                 driver = new EdgeDriver();
+                logger.info("Launching edge browser");
                 break;
         }
         driver.manage().window().maximize();
