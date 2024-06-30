@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class ReadXLSXFile {
+public class ReadWriteXLSXFile {
 
     public static Map<Object, Object> readXLSXFileData(String filePath, String sheetName) {
 
